@@ -45,7 +45,7 @@ async function main() {
 	}
 
 	send('[{"id":"1","method":"device.enable"}]');
-	for (var i = 2; i < 10; i++) {
+	for (var i = 2; i <= 10; i++) {
 		send(`[{"id":"${i}","method":"emulator.getEmulators"}]`);
 		await new Promise((resolve) => setTimeout(resolve, 1000));
 	}
